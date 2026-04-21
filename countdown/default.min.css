@@ -1,9 +1,10 @@
 .simply-countdown {
   overflow: hidden;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
-  gap: 1.25rem;
+  gap: 10px;
+  width: 100%;
   font-family:
     Inter,
     system-ui,
@@ -11,14 +12,15 @@
     sans-serif;
 }
 .simply-countdown > .simply-section {
-  width: 65px;
-  height: 65px;
-  padding: 1.5rem;
+  box-sizing: border-box !important;
+  width: 80px !important;
+  height: 80px !important;
+  padding: 0rem;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--pink);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
   border-radius: 1rem;
   box-shadow:
     0 4px 6px -1px rgba(0, 0, 0, 0.05),
@@ -36,7 +38,7 @@
 .simply-countdown > .simply-section .simply-amount {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1e293b;
+  color: var(--bg);
   line-height: 1.2;
   letter-spacing: -0.025em;
 }
@@ -49,9 +51,9 @@
 }
 @media (min-width: 640px) {
   .simply-countdown > .simply-section {
-    width: 75px;
-    height: 75px;
-    padding: 1.75rem;
+    width: 65px;
+    height: 65px;
+    padding: 0.5rem;
   }
   .simply-countdown > .simply-section .simply-amount {
     font-size: 1.75rem;
